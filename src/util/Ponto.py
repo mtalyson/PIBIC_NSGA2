@@ -1,8 +1,5 @@
-import numpy as np
-
-
 class Ponto:
-    objetivos = np.array([])
+    objetivos = []
     listaPontosDominados = []
     numeroDeVezesPontoDominado = 0
     rank = 0
