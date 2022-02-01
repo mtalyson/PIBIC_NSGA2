@@ -6,6 +6,7 @@ class Individuo:
     variaveis = np.array([])
     objetivos = np.array([])
     problema = Problema
+    crowdingdistance = 0.0
 
     def __init__(self, problema, variaveis):
         self.problema = problema
