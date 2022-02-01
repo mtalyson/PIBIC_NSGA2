@@ -1,12 +1,10 @@
-import numpy as np
-
 from src.individuo.Individuo import Individuo
 from src.problema.ProblemaExemplo import ProblemaExemplo
 
 
 class CrowdingDistance:
 
-    def avaliar(self, t: [Individuo]):
+    def avaliar(self, t):
         s = len(t)
 
         for ind in t:
@@ -26,20 +24,20 @@ class CrowdingDistance:
 
                 t.__getitem__(i).crowdingdistance += aux
 
-    def sort(self, t: [Individuo], n):
+    def sort(self, t, n):
 
         for i in range(len(t)-1):
             for j in range(i + 1, len(t)):
-                """if t.__getitem__(i).getObjetivos()[n] > t.__getitem__(j).getObjetivos()[n]:
+                if t.__getitem__(i).getObjetivos()[n] > t.__getitem__(j).getObjetivos()[n]:
                     aux = t.__getitem__(i)
                     t.__setitem__(i, t.__getitem__(j))
-                    t.__setitem__(j, aux)"""
+                    t.__setitem__(j, aux)
 
 
 def main():
     fronteiraindividuos = [
-        Individuo(ProblemaExemplo(), np.array([6], float)), Individuo(ProblemaExemplo(), np.array([7], float)),
-        Individuo(ProblemaExemplo(), np.array([8], float)), Individuo(ProblemaExemplo(), np.array([9], float))
+        Individuo(ProblemaExemplo(), [6]), Individuo(ProblemaExemplo(), [7]),
+        Individuo(ProblemaExemplo(), [8]), Individuo(ProblemaExemplo(), [9])
     ]
 
     cd = CrowdingDistance()

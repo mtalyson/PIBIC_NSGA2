@@ -1,10 +1,9 @@
-import numpy as np
 from src.problema.Problema import Problema
 
 
 class Individuo:
-    variaveis = np.array([])
-    objetivos = np.array([])
+    variaveis = []
+    objetivos = []
     problema = Problema
     crowdingdistance = 0.0
 
