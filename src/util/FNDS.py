@@ -1,4 +1,7 @@
 import gc
+
+from src.individuo.Individuo import Individuo
+from src.problema.ProblemaTeste import ProblemaTeste
 from src.util.Ponto import Ponto
 
 
@@ -93,3 +96,16 @@ class FNDS:
                 break
 
         return resultado
+
+# Testar FNDS (Debugar)
+def main():
+    pop = [Individuo(ProblemaTeste(), [0]), Individuo(ProblemaTeste(), [1]),
+           Individuo(ProblemaTeste(), [2]), Individuo(ProblemaTeste(), [3]),
+           Individuo(ProblemaTeste(), [4]), Individuo(ProblemaTeste(), [5])]
+
+    fnds = FNDS()
+    fnds.executa(pop)
+
+
+if __name__ == "__main__":
+    main()

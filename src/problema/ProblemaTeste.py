@@ -1,7 +1,7 @@
 from src.problema.Problema import Problema
 
 
-class ProblemaExemplo(Problema):
+class ProblemaTeste(Problema):
 
     def avaliar(self, variaveis):
         if not variaveis[0]:

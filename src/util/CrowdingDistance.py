@@ -1,5 +1,5 @@
 from src.individuo.Individuo import Individuo
-from src.problema.ProblemaExemplo import ProblemaExemplo
+from src.problema.ProblemaTeste import ProblemaTeste
 
 
 class CrowdingDistance:
@@ -42,11 +42,11 @@ class CrowdingDistance:
                     t.__setitem__(i, t.__getitem__(j))
                     t.__setitem__(j, aux)
 
-
+# Testar Crowding Distance (Debugar)
 def main():
     fronteiraindividuos = [
-        Individuo(ProblemaExemplo(), [6]), Individuo(ProblemaExemplo(), [7]),
-        Individuo(ProblemaExemplo(), [8]), Individuo(ProblemaExemplo(), [9])
+        Individuo(ProblemaTeste(), [6]), Individuo(ProblemaTeste(), [7]),
+        Individuo(ProblemaTeste(), [8]), Individuo(ProblemaTeste(), [9])
     ]
 
     cd = CrowdingDistance()

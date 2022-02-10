@@ -8,8 +8,8 @@ class ProblemaShaffe2(Problema):
 
     def avaliar(self, variaveis):
         objs = [0, 0]
-        objs[0] = math.pow(variaveis[0], 2) + math.pow(variaveis[1], 2)
-        objs[1] = math.pow(variaveis[0], 2) + math.pow(variaveis[1]-2, 2)
+        objs[0] = math.pow(variaveis[0], 2) + math.pow(variaveis[1], 2)  # x1^2 + x2^2
+        objs[1] = math.pow(variaveis[0], 2) + math.pow(variaveis[1] - 2, 2)  # x1^2 + (x2-2)^2
         return objs
 
     def getNumeroDeVariaveis(self):

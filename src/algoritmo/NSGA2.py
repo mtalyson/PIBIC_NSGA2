@@ -59,7 +59,7 @@ def imprimirPopulacao(novapopulacao):
             if j == len(objetivos) - 1:
                 print("%f" % objetivos[j] + ") ", end='')
             else:
-                print("%f" % objetivos[j] + ";", end='')
+                print("%f" % objetivos[j] + ",", end='')
 
 
 def makeOffspring(listafilhos, populacaoinicial):
@@ -84,14 +84,3 @@ def makeOffspring(listafilhos, populacaoinicial):
             filho2.mutar()
 
         listafilhos.extend(filhos)
-
-
-def main():
-    individuofactory = IndividuoShaffeFactory()
-
-    nsga2 = NSGA2()
-    nsga2.execute(individuofactory, 20, 100)
-
-
-if __name__ == "__main__":
-    main()
