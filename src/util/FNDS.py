@@ -34,9 +34,6 @@ class FNDS:
                 ponto1.rank = 1
                 fronteira1.append(ponto1)
 
-        del i, j, ponto1, ponto2, individuo
-        gc.collect()
-
         listadetodasasfronteiras.append(fronteira1)
 
         # Parte 2 - Calculando as Fronteiras Restantes
@@ -60,9 +57,6 @@ class FNDS:
             listadetodasasfronteiras.append(proximafronteira)
             fronteira_i = proximafronteira
 
-        del p, q, listadetodosospontosdominados_p, proximafronteira
-        gc.collect()
-
         # Transformando Retorno de Lista de Pontos para Lista de Individuos
         retornoindividuos = []
 
@@ -82,7 +76,7 @@ class FNDS:
 
         del i, j, individuo, ponto, fronteiradeindividuos
         gc.collect()
-        return None
+        return retornoindividuos
 
     def domina(self, p1, p2):
         objetivo1 = p1.objetivos
